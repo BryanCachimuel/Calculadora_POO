@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Calculadora</title>	
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Calculadora de Operaciones Básicas</h1>
+        <div class="row" id="antes">
+            <div class="col-md-6 mt-5">
+                <form id="form-resolve">
+                    <div class="form-group">
+                        <label>Número 1: </label>
+                        <input class="form-control" type="number" id="numero1">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Número 2: </label>
+                        <input class="form-control" type="number" id="numero2">
+                    </div>
+                    <!-- mt-3 => permite dar espacio los inputs que se encuentran 
+                        en la parte de enfrente de los checkbox de las operaciones
+                    -->
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <input type="checkbox" id="checkS">
+                            <label>Sumar</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" disabled id="sum">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <input type="checkbox" id="checkR">
+                            <label>Restar</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" disabled id="res">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <input type="checkbox" id="checkM">
+                            <label>Multiplicar</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" disabled id="mul">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <input type="checkbox" id="checkD">
+                            <label>Dividir</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" disabled id="div">
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+
+                        <div class="col-md-6">
+                            <input class="form-control btn-outline-success" type="submit" value="Operar">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="form-control btn-outline-info" type="reset" value="Resetear">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-6 mt-5" id="resultados"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
